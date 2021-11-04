@@ -45,6 +45,8 @@ $output .= "Resultado: {";
 $arrayToString = implode(",", $array);
 $output .= $arrayToString . "} Ordenado!";
 echo $output;
+
+
 ?>
 </body>
 </html>
