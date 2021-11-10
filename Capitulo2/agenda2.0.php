@@ -38,21 +38,13 @@ if (isset($_GET['submit'])) {
     displayForm($agenda);
     output($agenda);
 
-} else {
-    if (isset($_COOKIE['PHPSESSID']))
-    {
-        $backup = $_COOKIE['PHPSESSID'];
-        session_start(); # load session data
-        echo "before destroying:";
-        print_r($_SESSION);
-        echo '<br>';
-        $_SESSION = []; # coge todas las sesiones
-        session_destroy(); # close and remove session
-        session_id($backup);
-        echo "after destroying:";
-        print_r($_SESSION);
-        session_start();
-    }
+}else {
+    displayForm($agenda);
+}
+
+if(isset($_GET['restart'])) {
+    sessionDestroy();
+    echo '<script type="text/JavaScript"> location.reload(); </script>';
     displayForm($agenda);
 }
 
@@ -65,7 +57,10 @@ function displayForm($agenda)
         <input type="text" name="person[]" placeholder="Name"/> <!--required="required"-->
         <input type="number" name="person[]" placeholder="Phone"/>
         <input type="submit" name="submit" value="Submit"/>
+        <input type="submit" name="restart" value="Restart"/>
     </form>
+
+
     <?php
 
     $_SESSION['agenda'] = $agenda;
@@ -114,6 +109,15 @@ function delete($agenda, $name)
         echo "WARNING! NO HAS INTRODUCIDO NINGÚN NÚMERO DE TELÉFONO.";
     }
     return $agenda;
+}
+
+function sessionDestroy(){
+    $backup = $_COOKIE['PHPSESSID'];
+    session_start(); # load session data
+    $_SESSION = []; # coge todas las sesiones
+    session_destroy(); # close and remove session
+    session_id($backup);
+    session_start();
 }
 
 ?>
