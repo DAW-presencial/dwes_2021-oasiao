@@ -100,7 +100,7 @@ function displayForm($agenda)
     <h1>Agenda</h1>
     <form>
         <h5>Add your contact:</h5>
-        <input type="text" name="person[]" placeholder="Name"/> <!--required="required"-->
+        <input type="text" name="person[]" placeholder="Name" required="required"/> <!--required="required"-->
         <input type="number" name="person[]" placeholder="Phone"/>
         <?php
         /**

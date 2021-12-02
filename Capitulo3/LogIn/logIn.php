@@ -15,6 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if (isset($_POST['logIn'])) {
         logIn($connection, $username, $password);
+        loggedIn($username);
         back();
 
     } else if (isset($_POST['signIn'])) {
@@ -32,6 +33,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         deleteUser($connection, $username, $password);
         displayForm();
     }
+
 } else {
     displayForm();
 }
@@ -74,16 +76,17 @@ function connectionToDatabase()
 
 function logIn($connection, $username, $password)
 {
-    $logIn = false;
+    $loggedIn = false;
     foreach ($connection->query("SELECT username,password FROM login_users.users") as $values) {
         if ($username == $values['username'] && $password == $values['password']) {
-            $logIn = true;
+            $loggedIn = true;
             break;
         }
     }
 
-    if ($logIn) {
+    if ($loggedIn) {
         echo "Log In con exito!";
+
     } else {
         echo "Vuelve a intentarlo!";
     }
@@ -165,6 +168,23 @@ function missingId($connection)
 
     return $i;
 
+}
+
+function loggedIn($username,$password){
+    $loggedIn = true;
+    session_start();
+    $_SESSION["$username"] = $password;
+    var_dump($_SESSION["$username"]);
+    return $loggedIn;
+}
+
+function sessionDestroy(){
+    $backup = $_COOKIE['PHPSESSID'];
+    session_start(); # load session data
+    $_SESSION = []; # coge todas las sesiones
+    session_destroy(); # close and remove session
+    session_id($backup);
+    session_start();
 }
 
 ?>
