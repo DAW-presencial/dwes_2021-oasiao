@@ -3,11 +3,11 @@
    Sea $obj una instancia de esa subclase.<br />
 
    a) Si leo o escribo una propiedad invisible para $obj, ¿se activan las funciones mágicas de la clase padre?<br />
-         Sí. Como hemos podido comprobar, en la carpeta ___1eva/clases___, nos detecta las funciones mágicas de la clase padre,
-         clases que se encuentran en la carpeta ___/Class___
+         Sí. Como hemos podido comprobar, las clases con métodos mágicos que se encuentran en la clase padre las detecta una subclase que herede de él.
+         Si vamos al fichero:  /1eva/clases/index.php veremos la demostración. 
 
    b) ¿cómo afecta a la subclase que una propiedad sea privada o protegida en la clase padre?<br /> 
-         Si la propiedad es privada, la subclase no podrá heredarla. En cambio, si es protegida sí que puede heredarlo y utilizarla.
+         Si la propiedad es privada, la subclase no podrá heredarla. En cambio, si es protegida o pública sí que puede heredarlo y utilizarla.
 
 
 5. Crea un formulario que incluya lo siguiente:<br />
@@ -17,8 +17,10 @@
    d) un botón para enviar el formulario y que uan vez enviado, informe del resultado de cada uno de los datos enviados,<br />
    (nombre, apellidos, fecha de nacimiento y el nombre de los dos ficheros, incluido el tamaño de cada uno de ellos en bytes)<br />
    
-Hemos creado los cinco inputs más el botón dentro de una función llamada displayForm(). Una vez que enviamos, nos muestra
-el nombre, los apellidos, la fecha de nacimiento en formato (YYYY/MM/DD), los dos files y un botón para volver al formulario.<br />
+Hemos creado los cinco inputs (nombre, apellidos, fecha de nacimiento, file1 y file2) más el botón dentro de una función llamada displayForm().
+Hay que decir que los files se guardan en la carpeta /1eva/ficheros.
+Una vez que enviamos, nos muestra el nombre, los apellidos, la fecha de nacimiento en formato (YYYY/MM/DD), los dos files y sus tamaños en bytes.
+Además, nos muestra un botón para volver al formulario.<br />
 
 
 Ejercicio 6: Desplegar la aplicación en el servidor.<br />
