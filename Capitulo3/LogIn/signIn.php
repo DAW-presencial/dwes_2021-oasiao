@@ -14,6 +14,7 @@ class signIn extends connection
                 if ($user['username'] == $username) {
                     $existe = true;
                     break;
+
                 }
             }
             $query = "INSERT INTO login_users.users (ID, username, password) VALUES ('$ID','$username','$password')";
