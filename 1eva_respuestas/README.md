@@ -1,4 +1,4 @@
-##PARTE 2: PRUEBA PRÁCTICA <br />
+## PARTE 2: PRUEBA PRÁCTICA <br />
 4. Sea una subclase que no tiene definidas las funciones 'mágicas' __get() y __set() pero la clase padre sí. 
    Sea $obj una instancia de esa subclase.<br />
 
