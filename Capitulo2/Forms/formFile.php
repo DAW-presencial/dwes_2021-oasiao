@@ -12,7 +12,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <?php
 if (isset($_POST['submit'])) {
     fileUploaded();
-} else {
+
+}
+else {
     displayForm();
 }
 function displayForm()
@@ -42,6 +44,8 @@ function fileUploaded()
         echo "Uploaded!";
     }
 }
+
+
 ?>
 
 
