@@ -1,9 +1,9 @@
-**PARTE 2: PRUEBA PRÁCTICA
-4. Sea una subclase que no tiene definidas las funciones 'mágicas' __get() y __set() pero la clase padre sí. 
+__PARTE 2: PRUEBA PRÁCTICA__
+__4. Sea una subclase que no tiene definidas las funciones 'mágicas' __get() y __set() pero la clase padre sí. 
    Sea $obj una instancia de esa subclase.
-   a) Si leo o escribo una propiedad invisible para $obj, ¿se activan las funciones mágicas de la clase padre?
-   
-   b) ¿cómo afecta a la subclase que una propiedad sea privada o protegida en la clase padre? 
+   a) Si leo o escribo una propiedad invisible para $obj, ¿se activan las funciones mágicas de la clase padre?__
+
+   __b) ¿cómo afecta a la subclase que una propiedad sea privada o protegida en la clase padre?__ 
 
 
 **5. Crea un formulario que incluya lo siguiente:
@@ -14,4 +14,8 @@
    (nombre, apellidos, fecha de nacimiento y el nombre de los dos ficheros, incluido el tamaño de cada uno de ellos en bytes)**
    
 Hemos creado los cinco inputs más el botón dentro de una función llamada displayForm(). Una vez que enviamos, nos muestra
-el nombre, los apellidos, la fecha de nacimiento en formato (YYYY/MM/DD), los dos files y un botón para volver al formulario. 
+el nombre, los apellidos, la fecha de nacimiento en formato (YYYY/MM/DD), los dos files y un botón para volver al formulario.
+
+
+** 6 **
+He desplegado mi examen en el remoto: oasiao.ifc33b.cifpfbmoll.eu
